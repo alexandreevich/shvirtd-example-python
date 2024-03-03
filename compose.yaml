@@ -15,10 +15,10 @@ services:
     env_file:
     - ./.env
     environment:
-      - DB_HOST=db
-      - DB_USER=test_db
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
       - DB_PASSWORD=${MYSQL_PASSWORD}
-      - DB_NAME=test_db
+      - DB_NAME=${DB_NAME}
     networks:
         backend:
           ipv4_address: 172.20.0.5
